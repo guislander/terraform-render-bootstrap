@@ -43,6 +43,8 @@ spec:
     - --api-audiences=istio-ca
     - --service-account-issuer=kubernetes.default.svc
     - --service-account-signing-key-file=/etc/kubernetes/secrets/service-account.key
+    - --requestheader-client-ca-file=/etc/kubernetes/secrets/ca.crt
+    - --requestheader-allowed-names=""
     env:
     - name: POD_IP
       valueFrom:
