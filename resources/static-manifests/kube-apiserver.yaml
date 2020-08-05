@@ -45,6 +45,8 @@ spec:
     - --service-account-signing-key-file=/etc/kubernetes/secrets/service-account.key
     - --requestheader-client-ca-file=/etc/kubernetes/secrets/ca.crt
     - --requestheader-allowed-names=""
+    - --proxy-client-key-file=/etc/kubernetes/secrets/ca.key
+    - --proxy-client-cert-file=/etc/kubernetes/secrets/ca.crt
     env:
     - name: POD_IP
       valueFrom:
